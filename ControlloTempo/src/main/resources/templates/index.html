@@ -1,0 +1,8 @@
+<form method="post" action="/meteo">
+    <select name="idCitta">
+        <th:block th:each="c : ${cittaList}">
+            <option th:value="${c.id}" th:text="${c.nome}"></option>
+        </th:block>
+    </select>
+    <button type="submit">Visualizza Meteo</button>
+</form>
